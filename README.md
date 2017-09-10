@@ -1,3 +1,3 @@
 Add the folder 'Dygraph\src\dygraphComponent' in ur application.<br>
 In App.js import the 'DygraphJs.js'<br>
-To render the grap, call the DygraphJs component in ur jsx and pass configuartion and data as props to it. Eg:<pre><Dygraph config={this.graphConfig} data={this.graphData}/></pre>
+To render the grap, call the DygraphJs component in ur jsx and pass configuartion and data as props to it. Eg:{::nomarkdown}<Dygraph config={this.graphConfig} data={this.graphData}/>{:/}
