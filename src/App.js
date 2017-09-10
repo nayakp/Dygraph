@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import './App.css';
 import Dygraph from './dygraphComponent/DygraphJs';
 import GraphData from '../sample-data';
+import GraphData2 from '../sample-data2';
 
 class App extends Component {
   constructor(){
@@ -56,6 +57,7 @@ class App extends Component {
     }
     this.time = {};
     this.graphData = GraphData.map((i)=>{this.time[Date.parse(i[0])] =i[0];return [Date.parse(i[0]),i[1]]});
+    this.graphData2 = GraphData2.map((i)=>{this.time[Date.parse(i[0])] =i[0];return [Date.parse(i[0]),i[1]]});
   }
 
   render() {
@@ -70,7 +72,7 @@ class App extends Component {
         </div>
         <h1>The below is another dygrap with some other data</h1>
         <div className="grapMain">
-          <Dygraph config={this.graphConfig} data={this.graphData}/>
+          <Dygraph config={this.graphConfig} data={this.graphData2}/>
         </div>
       </div>
     );
