@@ -70,7 +70,7 @@ class App extends Component {
         <div className="grapMain">
           <Dygraph config={this.graphConfig} data={this.graphData}/>
         </div>
-        <h1>The below is another dygrap with some other data</h1>
+        <h1>The below is another dygraph with some other data</h1>
         <div className="grapMain">
           <Dygraph config={this.graphConfig} data={this.graphData2}/>
         </div>
