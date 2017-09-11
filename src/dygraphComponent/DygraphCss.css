@@ -4,3 +4,10 @@
 .dyGraphLegend{
 	margin:30px;
 }
+.dygraph-xlabel{
+	text-align: center;
+}
+.dygraph-ylabel{
+	transform: rotate(-90deg);
+    text-align: center;
+}
