@@ -2,14 +2,14 @@ import React, {Component} from 'react';
 import '../css/App.css';
 import Dygraph from '../components/dygraphComponent/DygraphJs';
 import GraphStore from '../store/graphStore';
+import Constants from '../constants/constants';
 
 class App extends Component {
   constructor() {
     super();
     let self = this;
     this.title = 'Dygraph Demo';
-    this.sectionTitle = 'Pressure Transient Details';
-    this.graphConfig = this.createGraphConfig();
+    this.sectionTitle = 'Pressure Transient Details';    this.graphConfig = this.createGraphConfig();
     /*this.time = {};*/
     this.graphData = GraphStore.getAllData();
     this.graphData = this.graphData.map((i) => {
@@ -21,12 +21,12 @@ class App extends Component {
   createGraphConfig() {
     let self = this;
     return {
-      title: "Pressure Transient(s)",
-      xlabel: "Time",
-      ylabel: "Pressure (meters)",
+      title: Constants.title,
+      xlabel: Constants.xlabel,
+      ylabel: Constants.ylabel,
       labels: [
-        "Date",
-        "Tampines Ave10 (Stn 40)"
+        Constants.labelsx,
+        Constants.labelsy
       ],
       axes: {
         x: {
@@ -80,3 +80,57 @@ class App extends Component {
 }
 
 export default App;
+/*
+folder structure
+C:\Nayak\test\Dygraph-master\src
+-graphApp
+  --components
+    --dygraphComponent
+      --DygraphCss.css
+      --DygraphJs.js
+  --constants
+      constants.json
+  --css
+    --App.css
+  --js
+    --App.js
+  --store
+    --graphStore.js
+  --test
+    --App.test.js
+-index.css
+-index.js
+*/
+
+/*
+create a graphStore.js
+
+import {EventEmitter} from "events";
+import data from '../../../sample-data';
+
+class GraphStore{
+  constructor(){
+    this.graphData = data;
+    this.start = 7000;
+    this.end = 11000;
+  }
+
+  getAllData(){
+    return this.graphData;
+  }
+}
+
+const graphStore = new GraphStore;
+export default graphStore;
+*/
+/*
+create a constants.json file
+
+{
+  "title":"Pressure Transient(s)",
+  "xlabel":"Time",
+  "ylabel":"Pressure (meters)",
+  "labelsx":"Date",
+  "labelsy":"Tampines Ave10 (Stn 40)"
+}
+*/
