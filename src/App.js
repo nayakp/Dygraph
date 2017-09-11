@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import '../css/App.css';
-import Dygraph from '../components/dygraph/Graph'
+import Dygraph from '../components/dygraph/Dygraph'
 import Constants from '../constants/constants';
 import graphConfig1 from '../store/graphConfig1';
 import graphConfig2 from '../store/graphConfig2';
@@ -45,7 +45,7 @@ C:\Nayak\test\Dygraph-master\src
   --components
     --dygraph
       --DygraphCss.css
-      --Graph.js
+      --Dygraph.js
   --constants
       constants.json
   --css
