@@ -49,7 +49,7 @@ class App extends Component {
       },
       underlayCallback: function (canvas, area, g) {
         /*http://dygraphs.com/gallery/#g/highlighted-region*/
-        let limits = self.getHighlightLimts(7000,11000),
+        let limits = self.getHighlightLimts(GraphStore.start,GraphStore.end),
         bottom_left = g.toDomCoords(limits.start, -20),
         top_right = g.toDomCoords(limits.end, +20),
         left = bottom_left[0],
